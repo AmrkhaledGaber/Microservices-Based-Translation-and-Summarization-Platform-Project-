@@ -1,0 +1,11 @@
+services:
+  en2ar-service:
+    build:
+      context: ./en2ar-service
+    ports:
+      - "8000:8000"
+  ar2en-service:
+    build:
+      context: ./ar2en-service
+    ports:
+      - "5000:5000"
