@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:15
+    container_name: db-service
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: nemoo
+      POSTGRES_DB: app_db
+    ports:
+      - "5434:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  db_data:
